@@ -50,17 +50,26 @@ body {
     transition: 0.3s;
 }
 
-@media screen and (max-width:600px){
-   .box{
-        font-size: 3rem;
-    }
 
-}
 @media screen and (max-width:800px){
     .box{
         font-size: 5rem;
     }
 
+}
+
+@media screen and (max-width:600px){
+    .box{
+         font-size: 4rem;
+     }
+ 
+ }
+
+@media screen and (max-width:400px){
+    .box{
+         font-size: 3rem;
+    }
+ 
 }
 
 .box:hover{
@@ -115,6 +124,8 @@ body {
 
 .msg-container{
     font-size: 3rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.8);
     height: 85vmin;
@@ -131,6 +142,12 @@ body {
     flex-direction: column;
     gap: 4rem;
     transition: 0.5s;
+}
+
+@media screen and (max-width: 800px){
+    .msg-container{
+        font-size: 2rem;
+    }
 }
 
 .hide{

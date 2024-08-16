@@ -64,9 +64,9 @@ const disableBoxes = () => {
 
 const showWinner = (winner) => {
     if(winner === "X"){
-        msg.innerText = `Sorry You Lose Retry!`
+        msg.innerText = `Sorry You Lose \n Retry!`;
     }else{
-        msg.innerText = `Congratulations, Winner is ${winner}`;
+        msg.innerText = `Congratulations \n You Win \n player: ${winner}`;
     }
     msgContainer.classList.remove("hide");
     disableBoxes();
