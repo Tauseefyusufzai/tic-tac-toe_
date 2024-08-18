@@ -33,7 +33,8 @@ boxes.forEach((box) => {
 });
 
 const playerMove = (box) => {
-    box.innerText = "O";
+    box.innerText = "o";
+    box.style.backgroundColor = "rgb(249, 228, 0)"
     box.disabled = true;
     turnO = false;
     checkWinner();
@@ -43,7 +44,9 @@ const computerMove = () => {
     let availableBoxes = [...boxes].filter(box => box.innerText === "");
     if (availableBoxes.length === 0) return;
     let randomBox = availableBoxes[Math.floor(Math.random() * availableBoxes.length)];
-    randomBox.innerText = "X";
+    randomBox.innerText = "x";
+    randomBox.style.backgroundColor = "rgb(245, 0, 79)"
+    randomBox.style.color ="white"
     randomBox.disabled = true;
     turnO = true;
     checkWinner();
@@ -53,6 +56,7 @@ const enableBoxes = () => {
     for (let box of boxes) {
         box.disabled = false;
         box.innerText = "";
+        box.style.backgroundColor = "white"
     }
 }
 
@@ -63,7 +67,7 @@ const disableBoxes = () => {
 }
 
 const showWinner = (winner) => {
-    if(winner === "X"){
+    if(winner === "x"){
         msg.innerText = `Sorry You Lose \n Retry!`;
     }else{
         msg.innerText = `Congratulations \n You Win \n player: ${winner}`;
